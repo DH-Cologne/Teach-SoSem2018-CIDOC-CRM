@@ -19,3 +19,7 @@
 .reveal section img {
     border: 2px solid #fff;
 }
+
+.reveal ul {
+    list-style-type: square;
+}
