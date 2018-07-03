@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>[SoSe2018] Semantische Datenmodellierung mit CIDOC-CRM | 03 -- CIDOC-CRM, WissKI, Praxis</title>
+
+    <meta name="description"
+          content="Übung SoSe 2018: Semantische Datenmodellierung mit CIDOC-CRM">
+    <meta name="author" content="Zoe Schubert, Jan G. Wieners">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="vendor/css/reveal.css">
+    <link rel="stylesheet" href="vendor/css/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="vendor/lib/css/zenburn.css">
+    <link rel="stylesheet" href="vendor/css/style.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="vendor/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section data-background="assets/img/pommes-titel.jpg">
+            <h2>Übung SoSe 2018</h2>
+            <br>
+            <br>
+            <h3>Semantische
+                <br>Datenmodellierung
+                <br>mit
+                <br>CIDOC-CRM</h3>
+            <br>
+            <p>
+                <small>
+                    MA Zoe Schubert | Dr. Jan G. Wieners
+                </small>
+                <small>
+                    SoSe2018 | Universität zu Köln, Institut für Digital Humanities
+                </small>
+            </p>
+        </section>
+        <section>
+            <section data-background="assets/img/">
+
+                <h2>Sitzungsüberblick</h2>
+                <br>
+                <br>
+                <div class="captioned-image-row">
+                    <div>
+                        Wdh.
+                        <img src="assets/img/wdh.png" height="270" width="270">
+                    </div>
+                    <div>
+                        WissKI
+                        <img src="assets/img/wisski.png" height="270" width="270">
+                    </div>
+                    <div>
+                        Praxis
+                        <img src="assets/img/ton.png" height="270" width="270">
+                    </div>
+                </div>
+
+            </section>
+            <section data-background="assets/img/alice-zeit.jpg">
+                <h3>Zeitplan</h3>
+                <h4>05.07.2018 -- 12:00 - 17:30</h4><br>
+                <ul>
+                    <li>Block 1: 12:00 Uhr - 13:40 Uhr</li>
+                    <ul>
+                        <li>Pause (20 Min.)</li>
+                    </ul>
+                    <li>Block 2: 14:00 Uhr – 15:45 Uhr</li>
+                    <ul>
+                        <li>Kurze Pause (15-20 Min.)</li>
+                    </ul>
+                    <li>Block 3: 16:00 - Ende</li>
+                    <br>
+                </ul>
+            </section>
+            <section>
+                <h3>Ablauf der Blöcke</h3>
+            </section>
+            <section>
+                <h3>Ablauf Block 1</h3>
+                <ul>
+                    <li>Wiederholung</li>
+                    <ul>
+                        <li>Semantic Web</li>
+                        <li>Sammlungen: TWS Wahn</li>
+                        <li>Technologien & CIDOC CRM</li>
+                    </ul>
+                    <li>WissKI</li>
+                    <ul>
+                        <li>Referat</li>
+                        <li>Hausaufgabe</li>
+                        <li>Live Präsentation</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h3>Ablauf Block 2</h3>
+                <ul>
+                    <li>Fortsetzung WissKI</li>
+                    <li>Praktisches Arbeiten</li>
+                    <li>Finale Besprechung</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Ablauf Block 3</h3>
+                <ul>
+                    <li>Vortrag im Kolloquium:</li>
+                    <li>MATCH – Mathematical Transformations for Cultural Heritage</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>Block 1</h3>
+            </section>
+            <section>
+                <h2>Wiederholung</h2>
+            </section>
+            <section>
+                <ul>
+                    <li>Semantic Web:
+                        <br>Herausforderung und Grundlagen
+                    </li>
+                    <li>HTML, XHTML, XML, DTD, Schema</li>
+                    <li>Standards und Sprachen, eine Auswahl: FOAF, RDF, OWL, SPARQL</li>
+                    <li>Kulturelles Erbe: Über Sammlungen und deren Daten</li>
+                    <li>Ontologien</li>
+                    <li>CIDOC CRM</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Besuch TWS Wahn</h2>
+                <ul>
+                    <li>Datenerfassung heterogener Sammlungen</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Technologien & CIDOC CRM</h2>
+            </section>
+            <section>
+
+                <h2>Technologien</h2>
+
+                <ul>
+                    <li>Ontologie: RDF-Schema, KIF, DAML+OIL, OWL, STEP</li>
+                    <li>CRM Instanzen: RDF, XML, DAML+OIL, OWL</li>
+                </ul>
+
+            </section>
+
+            <section>
+
+                <h2>Konzepte, eine Auswahl</h2>
+                <ul>
+                    <li>Klasse (class), Subklasse (subclass), Überklasse (superclass)</li>
+                    <li>Intension (intension): beabsichtigte Bedeutung der Klasse oder Eigenschaft</li>
+                    <li>Extension (extension): Menge aller Instanzen der Klasse</li>
+                    <li>Anwendungsbereich (scope note): natürlichsprachige Beschreibung der Intension einer Klasse oder
+                        Eigenschaft
+                    </li>
+                    <li>Instanz (instance): Real existiernder Gegenstand, der alle Merkmale aufweist, die die Kriterien
+                        der Intension der KLasse erfüllen.<br>
+                        Beispiel: Das als "Mona Lisa" bekannte Gemälde ist eine Instanz der Klasse E22 Künstlicher
+                        Gegenstand.
+                    </li>
+                    <li>Eigenschaft (property): spezifische Art von Beziehung zwischen zwei Klassen</li>
+                </ul>
+
+            </section>
+            <section>
+                <h3>Alle Themen:</h3>
+                <br>RDF, Ressource, IRI, Fakt / Statement, Tripel, Linked Data, Präfix, Namensraum, Vokabular /
+                Ontologie, RDFS, OWL, SKOS, FOAF, DC, Triplestores, Datenbanken: Relational, NoSQL-/dokumentenbasiert,
+                Graph-DBs, TripleStores
+            </section>
+            <section>
+                <ul>
+                    <li>CIDOC: Comité international pour la documentation, Komitee International Council of Museums
+                        (ICOM)
+                    </li>
+                    <li>CRM: Conceptual Reference Model</li>
+                    <li>1996: Beginn der Arbeiten am CRM</li>
+                    <li>Ab 2001 zu internationalem Standard entwickelt</li>
+                    <li>Seit 2006 ISO Norm (ISO 21127)</li>
+                    <li>Weiterentwicklung von CIDOC CRM durch CRM SIG</li>
+                    <li>"Lingua Franca" eines transdisziplinären Forschungsansatzes</li>
+                </ul>
+            </section>
+            <section>
+
+                <h2>CRM kompatible Form</h2>
+                <ul>
+                    <li>CRM == formale Ontologie, die durch eine Wissensdarstellungssprache (knowledge representation
+                        language) ausgedrückt werden kann.
+                    </li>
+                    <li>Begriffe und Konzepte des CRM können als Menge von Sätzen instanziiert werden.</li>
+                    <li>Klassen und Eigenschaften werden durch ihre Initialen identifiziert, z.B. E55 oder P12.</li>
+                </ul>
+
+            </section>
+            <section>
+                <h2>Beispiel eines Modells</h2>
+            </section>
+            <section>
+                <img src="assets/img/cidoc-balzac.jpg" class="stretch">
+            </section>
+            <section>
+                <h2>Board game</h2>
+            </section>
+
+            <section>
+
+                <h2>Hausaufgaben</h2>
+                <ul>
+                    <li>Modellierte Beispiele</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h2>Ontologien, Ontologierepräsentation</h2>
+                    <ul>
+                        <li>(u.a.) RDF, RDFS (RDF-Schema), OWL (Web Ontology Language)</li>
+                        <li>RDF
+                            <ul>
+                                <li>graphbasiertes Modell</li>
+                                <li>RDF-Graph besteht aus einer Menge von RDF-Tripeln (Aussagen)</li>
+                                <li>Aussage: Subjekt, Prädikat, Objekt</li>
+                            </ul>
+                        </li>
+                        <li>OWL: OWL Lite, OWL DL, OWL Full</li>
+                        <li>CIDOC CRM visualisiert: <a
+                                href="http://visualdataweb.de/webvowl/#iri=http://erlangen-crm.org/170309/">http://visualdataweb.de/webvowl/#iri=http://erlangen-crm.org/170309</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section data-background="assets/img/cidoc-webvowl.png">
+                </section>
+            </section>
+            <section>WissKI</section>
+            <section>WissKI Referat</section>
+            <section>WissKI Live</section>
+        </section>
+        <section>
+            <h3>Pause</h3>
+        </section>
+        <section>
+            <section>
+                <h3>Block 2</h3>
+            </section>
+            <section>
+                <h2>WissKI</h2>
+            </section>
+        </section>
+        <section>
+            <h3>Pause</h3>
+            Für Block 3 bitte zum Kolloquium kommen
+        </section>
+
+    </div>
+</div>
+
+<script src="vendor/lib/js/head.min.js"></script>
+<script src="vendor/js/reveal.js"></script>
+
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                    return !document.body.classList;
+                }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },
+            {src: 'plugin/search/search.js', async: true},
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
